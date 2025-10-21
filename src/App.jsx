@@ -12,7 +12,7 @@ function App() {
 
   <CarritoProvider>
 
-   <BrowserRouter>
+   <BrowserRouter basename="/frontend">
 
     <AppContent />
 
