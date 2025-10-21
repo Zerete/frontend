@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import totalFondo from "../assets/img/totalfondo.jpg"; // ✅ importa la imagen
 
 function IniciarSesion() {
   const [usuario, setUsuario] = useState("");
@@ -9,7 +10,6 @@ function IniciarSesion() {
 
   const manejarEnvio = (e) => {
     e.preventDefault();
-
     if (usuario === "admin" && contrasena === "1234") {
       setError("");
       navigate("/admin");
@@ -21,7 +21,7 @@ function IniciarSesion() {
   return (
     <div
       style={{
-        backgroundImage: "url('/src/assets/img/totalfondo.jpg')",
+        backgroundImage: `url(${totalFondo})`, // ✅ usa la variable importada
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
@@ -41,9 +41,7 @@ function IniciarSesion() {
           boxShadow: "0 0 10px rgba(0,0,0,0.3)",
         }}
       >
-        <h2 style={{ textAlign: "center", color: "#0d6efd" }}>
-          Iniciar Sesión
-        </h2>
+        <h2 style={{ textAlign: "center", color: "#0d6efd" }}>Iniciar Sesión</h2>
 
         <div style={{ marginBottom: "1rem" }}>
           <label>Usuario:</label>

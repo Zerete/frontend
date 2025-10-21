@@ -1,10 +1,10 @@
-// src/pages/Contacto.jsx
 import React, { useState, useEffect } from "react";
 
-const images = [
-  "/src/assets/img/LuisFoto.png",
-  "/src/assets/img/angel-lazaro.jpg"
-];
+
+import LuisFoto from "../assets/img/LuisFoto.png";
+import AngelLazaro from "../assets/img/angel-lazaro.jpg";
+
+const images = [LuisFoto, AngelLazaro];
 
 function Contacto() {
   const [current, setCurrent] = useState(0);
@@ -26,18 +26,14 @@ function Contacto() {
         borderRadius: "10px",
         transition: "opacity 0.5s ease-in-out",
         marginLeft: "150px",
-        opacity: 0.9, 
+        opacity: 0.9,
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "2rem", color: "#fff" }}>
         Contáctanos
       </h1>
 
-      <div
-        className="contact-layout"
-        style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}
-      >
- 
+      <div className="contact-layout" style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
         <div style={{ flex: "1 1 300px", minWidth: "250px" }}>
           <h2 style={{ color: "#fff" }}>Sobre Nosotros</h2>
           <p style={{ color: "#fff" }}>
@@ -50,14 +46,14 @@ function Contacto() {
             ya sea un partido casual con amigos o una competencia organizada.
           </p>
           <h3 style={{ color: "#fff" }}>Contacto Directo</h3>
-          <p style={{ color: "#fff" }}>Email: <a style={{ color: "#fff" }} href="mailto:contacto.chanchas@gmail.com">contacto.chanchas@gmail.com</a></p>
+          <p style={{ color: "#fff" }}>
+            Email: <a style={{ color: "#fff" }} href="mailto:contacto.chanchas@gmail.com">contacto.chanchas@gmail.com</a>
+          </p>
           <p style={{ color: "#fff" }}>Teléfono: +56 9 1234 5678</p>
         </div>
 
-  
         <div style={{ flex: "1 1 300px", minWidth: "250px" }}>
-          <h2 style={{ textAlign: "right", marginRight: "230px", color: "#fff" }}> 
-                Nuestras Fotos</h2>
+          <h2 style={{ textAlign: "right", marginRight: "230px", color: "#fff" }}>Nuestras Fotos</h2>
           <img
             src={images[current]}
             alt={`Foto ${current + 1}`}
@@ -67,13 +63,12 @@ function Contacto() {
               objectFit: "cover",
               borderRadius: "10px",
               transition: "opacity 0.5s ease-in-out",
-              marginLeft:"150px",
+              marginLeft: "150px",
             }}
           />
         </div>
       </div>
 
-      
       <div
         style={{
           marginTop: "2rem",

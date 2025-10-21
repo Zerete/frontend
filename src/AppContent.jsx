@@ -30,6 +30,7 @@ import Carrito from "./pages/Carrito";
 
 import Pago from "./pages/Pago";
 
+import bgHero from "../img/bg-hero.jpg"; 
 
 
 function AppContent() {
@@ -60,7 +61,7 @@ function AppContent() {
 
      minHeight: "100vh",
 
-     backgroundImage: "url('/img/bg-hero.jpg')",
+     backgroundImage: `url(${bgHero})`,
 
      backgroundSize: "cover",
 

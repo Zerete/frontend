@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/frontend/', // 👈 esto es lo importante para GitHub Pages
+  base: '/frontend/', // Esto es esencial para GH Pages
 })
